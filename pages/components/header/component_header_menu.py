@@ -25,3 +25,11 @@ class ComponentHeaderMenu:
             browser.element("""a.top-menu__items[href="/info/sposoby-dostavki/"]""").should(
                 Condition.by_and(be.clickable, have.text("Доставка"))).click()
         return self
+
+    @allure.step("Пользователь нажимает на кнопку 'Корзина'")
+    def click_cart(self):
+        with allure.step("Происходит переход на страницу 'Корзина'"):
+            browser.element("""//div[@class="tw-group tw-relative"]//a[@href="/order/"]""").should(
+                Condition.by_and(be.clickable, have.text("Корзина"))).click()
+        return self
+
