@@ -85,10 +85,10 @@ def browser_options(request):
 
         yield
 
-        attach.add_screenshot(browser=browser)
-        attach.add_logs(browser=browser)
-        attach.add_html(browser=browser)
-        attach.add_video(browser=browser)
+        allure_attachments.add_screenshot(browser=browser)
+        allure_attachments.add_logs(browser=browser)
+        allure_attachments.add_html(browser=browser)
+        allure_attachments.add_video(browser=browser)
 
         browser.quit()
 
